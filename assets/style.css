@@ -1,0 +1,233 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.kasir {
+    background-color: white;
+    display: grid;
+    height: 100vh;
+    gap: 10px;
+    grid-template-columns: 65% 34%;
+}
+
+.kasir_wrapper {
+    box-sizing: border-box;
+}
+
+.cart {
+    padding: 10px;
+    height: 100vh;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 8px #dedede;
+}
+
+.cart_main_header {
+    margin: 10px 0px;
+}
+
+.cart_main_header span {
+    display: block;
+    background-color: red;
+    text-align: center;
+    color: white;
+    padding: 4px 0px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
+.cart_total_belanja {
+    font-size: 1.6em;
+    display: block;
+}
+
+.cart_main_top {
+    display: flex;
+    align-items: center;
+    border: 1px dashed red;
+    padding: 10px 20px;
+    justify-content: space-between;
+}
+
+.cart_product_lists table {
+    width: 100%;
+    border: none;
+    border-collapse: collapse;
+}
+
+.cart_product_lists table thead {
+    background-color: red;
+    color: white;
+    border: 1px solid grey;
+    text-align: center;
+}
+
+.cart_product_lists table thead tr th {
+    padding: 5px 0px;
+    border: none;
+}
+
+.cart_product_lists table tbody tr {
+    border: none;
+    border: 1px solid;
+    text-align: center;
+}
+
+.kasir_left {
+    box-shadow: 0px 0px 8px #dedede;
+    height: 100vh;
+}
+
+.cart_product_lists table tbody tr td {
+    border: 1px solid grey;
+    padding: 3px 0px;
+}
+
+.cart_footer {
+    padding: 10px 0px;
+    margin-top: 20px;
+}
+
+.cart_footer .form_bayar {
+    display: flex;
+    align-items: center;
+    border: 1px solid #dedede;
+    border-radius: 2px;
+    justify-content: space-between;
+    overflow: hidden;
+
+}
+
+.cart_footer .form_bayar input {
+    padding: 10px 10px;
+    width: 100%;
+    border: none;
+    font-size: large;
+    outline: none;
+}
+
+.cart_footer .form_bayar button {
+    padding: 10px 0px;
+    border: none;
+    background-color: red;
+    color: white;
+    display: block;
+    margin: 3px;
+    cursor: pointer;
+    width: 30%;
+}
+
+.cart_footer .form_bayar span {
+    display: block;
+    width: 25%;
+    margin: 2px;
+    text-align: center;
+    padding: 10px 0px;
+    font-weight: bold;
+    color: white;
+    background-color: red;
+}
+
+.cart_header {
+    text-align: center;
+    display: block;
+    background-color: red;
+    padding: 5px 0px;
+    color: white;
+}
+
+.barang_lists_title {
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: 3px solid red;
+    width: 100%;
+    padding: 3px 0px;
+    display: block;
+    text-transform: uppercase;
+}
+
+.produk_lists {
+    margin: 10px 5px;
+    display: grid;
+    gap: 10px;
+    overflow-y: scroll;
+    height: 90vh;
+    border-radius: 3px;
+    padding: 4px 10px;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.produk_lists::-webkit-scrollbar {
+    background-color: #dedede;
+    width: 5px;
+}
+
+.produk_lists::-webkit-scrollbar-thumb {
+    background-color: red;
+    border-radius: 100px;
+}
+
+.produk_list {
+    box-shadow: 0px 0px 4px #dedede;
+    border: 1px solid #dedede;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.produk_list img {
+    width: 100%;
+    aspect-ratio: 10/9;
+}
+
+.produk_list_footer {
+    display: flex;
+    gap: 6px;
+    flex-direction: column;
+}
+
+.produk_list_footer .price {
+    font-size: 1.3rem;
+}
+
+.produk_list_footer .btn_add {
+    background-color: red;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    padding: 5px 0px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 8px;
+    font-weight: bold;
+}
+
+
+.cart_button_change_qty {
+    display: flex;
+    border: 1px solid #dedede;
+    overflow: hidden;
+    justify-content: space-between;
+    width: 60%;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.cart_button_change_qty input {
+    padding: 4px 0;
+    border: none;
+    width: 80%;
+}
+
+.cart_button_change_qty input:not(input[type='submit']) {
+    outline: none;
+    text-align: center;
+}
+
+.cart_button_change_qty input[type='submit'] {
+    background-color: red;
+    color: white;
+    width: 30%;
+    cursor: pointer;
+}
