@@ -100,11 +100,11 @@ $products = getProducts();
                 </div>
                 <div class="cart_footer">
                     <?php if(count($_SESSION['carts']) > 0){ ?>
-                    <div class="form_bayar">
+                    <form class="form_bayar" action="bayar.php" method="POST">
                         <span>Rp</span>
-                        <input placeholder="Masukan Jumlah Bayar" type="text" class="jumlah_bayar">
-                        <button>Bayar</button>
-                    </div>
+                        <input placeholder="Masukan Jumlah Bayar" name="jumlah_bayar" type="text" class="jumlah_bayar">
+                        <button name="btn_bayar">Bayar</button>
+                    </form>
                     <?php } ?>
                 </div>
             </div>
