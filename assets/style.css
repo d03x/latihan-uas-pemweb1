@@ -231,3 +231,56 @@
     width: 30%;
     cursor: pointer;
 }
+
+.admin_page{
+    height: 100vh;
+    max-width: 90%;
+    margin: 0px auto;
+}
+.admin_page .admin_navbar{
+    display: flex; 
+    background-color: red;
+    padding: 0 10px;
+    color: white;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+}
+.admin_navbar .admin_menu{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+}
+.admin_navbar .admin_menu li a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+.statistik{
+    display: grid;
+    gap: 10px;
+    margin: 10px 0px;
+    grid-template-columns: repeat(1,1fr);
+}
+.statistik .statistik_item{
+    border: 1px solid red;
+    display: flex;
+    padding: 10px;
+    gap: 5px;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.statistik .statistik_item span:first-child{
+    font-size: large;
+    font-weight: bold;
+}
+.statistik.statistik_penjualan{
+    grid-template-columns: repeat(4,1fr);
+}
+.statistik.statistik_general{
+    grid-template-columns: repeat(2,1fr);
+
+}

@@ -23,6 +23,7 @@ if ( isset($_SESSION['carts']) && isset($_POST['btn_bayar']))
        foreach ($produk as  $value) {
         $total =($value['price'] * $value['qty']);
             $db->query("INSERT INTO detail_transaksi (kode_transaksi,id_produk,qty,total) VALUES('$kodeTransaksi','{$value['id']}','{$value['qty']}','{$total}')");
+            $db->query("UPDATE `product` SET `stok`=stok-$value[qty] WHERE id='$value[id]';");
        }
        $db->commit();
        unset($_SESSION['carts']);

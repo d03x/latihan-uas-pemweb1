@@ -99,7 +99,7 @@ $products = getProducts();
                     </table>
                 </div>
                 <div class="cart_footer">
-                    <?php if(count($_SESSION['carts']) > 0){ ?>
+                    <?php if(isset($_SESSION['carts']) && count($_SESSION['carts']) > 0){ ?>
                     <form class="form_bayar" action="bayar.php" method="POST">
                         <span>Rp</span>
                         <input placeholder="Masukan Jumlah Bayar" name="jumlah_bayar" type="text" class="jumlah_bayar">
