@@ -6,4 +6,4 @@ if ( getStockProduct($_GET['product_id']) < 1  )
 }
 $a = addToCart($_GET['product_id']);
 
-header('location:../index.php');
+header('location:../entry_transaksi.php');

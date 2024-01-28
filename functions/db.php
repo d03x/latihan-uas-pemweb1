@@ -1,5 +1,5 @@
 <?php
-
+$app_path = '';
 function db(){
     $host = 'localhost';
     $user = 'root';

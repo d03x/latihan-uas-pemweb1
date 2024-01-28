@@ -1,26 +1,23 @@
 <?php session_start();
-require __DIR__."/../functions/functions.php";
-require __DIR__."/../functions/statistik.php";
+require __DIR__ . "/../functions/functions.php";
+require __DIR__ . "/../functions/statistik.php";
 
+$uri = $app_path.$_SERVER['REQUEST_URI']
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../assets/style.css">
 </head>
+
 <body>
     <div class="admin_page">
-       <nav class="admin_navbar">
-        <h1>Halaman Admin</h1>
-       <ul class="admin_menu">
-            <li><a href="barang.php">Barang</a></li>
-            <li><a href="barang.php">Laporan Penjualan</a></li>
-        </ul>
-       </nav>
-       <main class="main_page">
+    <?php require __DIR__.'/_admin_navbar.php'?>
+        <main class="main_page">
             <div class="statistik statistik_general">
                 <div class="statistik_item">
                     <span>Total Product</span>
@@ -51,14 +48,15 @@ require __DIR__."/../functions/statistik.php";
                 </div>
             </div>
             <div class="" style="margin:20px 0px;">
-            <div class="statistik">
-                <div class="statistik_item">
-                    <span>Total Penghasilan</span>
-                    <span>Rp. <?=formatRupiah(getTotalPenghasilan())?></span>
+                <div class="statistik">
+                    <div class="statistik_item">
+                        <span>Total Penghasilan</span>
+                        <span>Rp. <?= formatRupiah(getTotalPenghasilan()) ?></span>
+                    </div>
                 </div>
             </div>
-        </div>
-       </main>
+        </main>
     </div>
 </body>
+
 </html>
