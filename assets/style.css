@@ -400,3 +400,37 @@ input.input_file{
     font-size: small;
     display: block;
 }
+.login-form{
+margin: 100px auto;
+border-radius: 10px;
+padding: 20px;
+width: 400px;
+background-color: red;
+color: white;
+box-shadow: 0px 0px 8px #dedede;
+border: 1px solid grey;
+}
+.login-form input{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px ;
+    border: none;
+}
+.login-form h2{
+    text-align: center;
+    margin:  0px;
+}
+.login-form .field{
+    margin-bottom:20px;
+}
+.login-form button{
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    font-weight: bold;
+}

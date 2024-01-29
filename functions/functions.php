@@ -8,7 +8,7 @@ function getProducts()
     $queryGetProduct = db()->query("SELECT * FROM product ORDER BY id ASC");
     return $queryGetProduct;
 }
-function formatRupiah(int $price)
+function formatRupiah(?int $price = 0)
 {
     return number_format($price, 2, ',', '.');
 }

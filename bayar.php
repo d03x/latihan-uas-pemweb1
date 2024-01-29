@@ -6,7 +6,7 @@ if ( isset($_SESSION['carts']) && isset($_POST['btn_bayar']))
     $jumlahBayar = (int) $_POST['jumlah_bayar'] ?? 0;
     if ( $jumlahBayar < getSubtotalCart() ){
         $kurangNya = formatRupiah( getSubtotalCart() - $jumlahBayar);
-        die("<script>alert('jumlah bayar kurang {$kurangNya}');location.href='index.php'</script>");
+        die("<script>alert('jumlah bayar kurang {$kurangNya}');location.href='entry_transaksi.php'</script>");
     }
 
     $produk = getProductFromSession();
@@ -30,7 +30,7 @@ if ( isset($_SESSION['carts']) && isset($_POST['btn_bayar']))
        header('location:cetak_struk.php?trx='.$kodeTransaksi);
     } catch (mysqli_sql_exception $th) {
      $db->rollback();
-     die("<script>alert('Transaksi Gagal!');location.href='index.php'</script>");
+     die("<script>alert('Transaksi Gagal!');location.href='entry_transaksi.php'</script>");
     }
 
 }

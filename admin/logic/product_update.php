@@ -16,7 +16,8 @@ if (isset($_POST['save'])) {
     $image = $_FILES['image'] ?? null;
     $uploadPath = 'images/';
     $extension = pathinfo($image['name'], PATHINFO_EXTENSION);
-    if ($image) {
+   
+    if ($image && $image['error']!=4) {
         $product_image = $uploadPath . md5(rand()) . "." . $extension;
     } else {
         $product_image = $db->query("SELECT product_image FROM product WHERE id='$id'")->fetch_object()->product_image;
