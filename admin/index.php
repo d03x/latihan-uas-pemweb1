@@ -45,7 +45,7 @@ $uri = $app_path.$_SERVER['REQUEST_URI']
                     <span><?= transaksiBulanIni()->jumlah_transaksi ?? 0; ?></span>
                 </div>
                 <div class="statistik_item">
-                    <span>Penhasilan Hari Ini</span>
+                    <span>Penghasilan Hari Ini</span>
                     <span>Rp. <?= formatRupiah(transaksiHariIni()->total_transaksi ?? 0); ?></span>
                 </div>
                 <div class="statistik_item">
