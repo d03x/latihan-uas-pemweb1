@@ -247,6 +247,7 @@
     padding: 0 10px;
     border-radius: 10px;
     color: white;
+    box-shadow: 0px 0px 2px rgb(138, 138, 138);
     height: 50px;
     align-items: center;
     justify-content: space-between;

@@ -22,6 +22,20 @@ FROM transaksi");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+     <style>
+        table{
+            margin: 10px 0px;
+            border-collapse: collapse;
+        }
+        table th{
+            background-color: red;
+            color: white;
+            height: 28px;
+        }
+        table td{
+            height: 25px;
+        }
+     </style>
     <link rel="stylesheet" href="../assets/style.css">
 </head>
 
@@ -29,7 +43,7 @@ FROM transaksi");
     <div class="admin_page">
         <?php require __DIR__ . '/_admin_navbar.php' ?>
         <main class="main_page">
-            <h1>Laporan Transaksi</h1>
+            <h1>Riwayat & Laporan Transaksi</h1>
             <table id='table' border='1' width="100%" style="text-align:center;">
                 <thead>
                     <tr>

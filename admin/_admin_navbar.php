@@ -1,5 +1,5 @@
 <nav class="admin_navbar">
-    <h1>Halaman Admin</h1>
+    <h1>::.Administrator.::</h1>
     <ul class="admin_menu">
         <li><a href="product.php">Product</a></li>
         <li><a href="laporan_transaksi.php">Laporan Transaksi</a></li>
