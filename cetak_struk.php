@@ -11,7 +11,7 @@ $dataTransaksi = db()->query("SELECT * FROM transaksi WHERE kode_transaksi='{$ko
 <html>
 
 <head>
-    <title>Faktur Pembayaran</title>
+    <title>Struk Pembayaran</title>
     <style>
         #tabel {
             font-size: 15px;
