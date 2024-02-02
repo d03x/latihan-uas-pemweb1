@@ -1,11 +1,8 @@
-<?php require __DIR__."/functions/functions.php";
+<?php require __DIR__ . "/functions/functions.php";
 
 $kodeTransaksi = $_GET['trx'] ?? null;
-if(!$kodeTransaksi) header('location:index.php');
-
+if (!$kodeTransaksi) header('location:index.php');
 $dataTransaksi = db()->query("SELECT * FROM transaksi WHERE kode_transaksi='{$kodeTransaksi}'")->fetch_assoc();
-
-
 
 ?>
 <html>
@@ -47,12 +44,11 @@ $dataTransaksi = db()->query("SELECT * FROM transaksi WHERE kode_transaksi='{$ko
                 border-width: 1px;
             }
         </style>
-        <table cellspacing='0'  cellpadding='0'
-            style='width:350px; font-size:12pt; font-family:calibri;  border-collapse: collapse;' border='0'>
+        <table cellspacing='0' cellpadding='0' style='width:350px; font-size:12pt; font-family:calibri;  border-collapse: collapse;' border='0'>
 
             <tr align='center'>
                 <td>Item</td>
-                <td >Price</td>
+                <td>Price</td>
                 <td>Qty</td>
                 <td>@Total</td>
             <tr>
@@ -66,14 +62,14 @@ $dataTransaksi = db()->query("SELECT * FROM transaksi WHERE kode_transaksi='{$ko
             $total_belanja = 0;
             while ($data = $query->fetch_assoc()) {
                 $total_belanja += $data['total'];
-                ?>
-            <tr>
-                <td style='vertical-align:top'><?= $data['product_name'] ?></td>
-                <td style='vertical-align:top; text-align:right; padding-right:10px'>
-                    Rp.<?= formatRupiah($data['price']) ?></td>
-                <td style='vertical-align:top; text-align:right; padding-right:10px'><?= $data['qty'] ?></td>
-                <td style='text-align:right; vertical-align:top'><?= "Rp.".formatRupiah($data['total']) ?></td>
-            </tr>
+            ?>
+                <tr>
+                    <td style='vertical-align:top'><?= $data['product_name'] ?></td>
+                    <td style='vertical-align:top; text-align:right; padding-right:10px'>
+                        Rp.<?= formatRupiah($data['price']) ?></td>
+                    <td style='vertical-align:top; text-align:right; padding-right:10px'><?= $data['qty'] ?></td>
+                    <td style='text-align:right; vertical-align:top'><?= "Rp." . formatRupiah($data['total']) ?></td>
+                </tr>
             <?php
             }
 
@@ -88,21 +84,21 @@ $dataTransaksi = db()->query("SELECT * FROM transaksi WHERE kode_transaksi='{$ko
                 <td colspan='4'>
                     <div style='text-align:right; color:black'>Total : </div>
                 </td>
-                <td style='text-align:right; font-size:16pt; color:black'><?= 'Rp.'.formatRupiah($total_belanja) ?></td>
+                <td style='text-align:right; font-size:16pt; color:black'><?= 'Rp.' . formatRupiah($total_belanja) ?></td>
             </tr>
             <tr>
                 <td colspan='4'>
                     <div style='text-align:right; color:black'>Cash : </div>
                 </td>
                 <td style='text-align:right; font-size:16pt; color:black'>
-                    Rp.<?=formatRupiah($dataTransaksi['jumlah_bayar'])?></td>
+                    Rp.<?= formatRupiah($dataTransaksi['jumlah_bayar']) ?></td>
             </tr>
             <tr>
                 <td colspan='4'>
                     <div style='text-align:right; color:black'>Change : </div>
                 </td>
                 <td style='text-align:right; font-size:16pt; color:black'>
-                    Rp.<?=formatRupiah($dataTransaksi['kembalian'])?></td>
+                    Rp.<?= formatRupiah($dataTransaksi['kembalian']) ?></td>
             </tr>
 
         </table>

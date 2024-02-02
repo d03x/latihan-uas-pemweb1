@@ -50,7 +50,6 @@ FROM transaksi");
                         <th>Kode Transaksi</th>
                         <th>Tanggal Transaksi</th>
                         <th>Total Belanja</th>
-                        <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -64,10 +63,7 @@ FROM transaksi");
                                 <td><?= $row->kode_transaksi ?></td>
                                 <td><?= $row->waktu_transaksi ?></td>
                                 <td>Rp.<?= formatRupiah($row->total) ?></td>
-                                <td>
-                                    <a href="javascript:void()">Detail</a>
-                                    <!-- <a href="./cetak_laporan_transaksi.php?trx=<?= $row->kode_transaksi ?>">Cetak</a> -->
-                                </td>
+                                
                             </tr>
 
                     <?php
@@ -81,7 +77,6 @@ FROM transaksi");
                     <tr>
                         <td colspan="2">Subtotal:</td>
                         <td>Rp.<?= formatRupiah($subtotal) ?></td>
-                        <td></td>
                     </tr>
                 </tbody>
             </table>

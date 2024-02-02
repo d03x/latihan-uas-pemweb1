@@ -21,13 +21,13 @@ $products = getProducts();
     </nav> -->
     <div class="kasir">
         <div class="kasir_left">
-            <span class="barang_lists_title">Barang</span>
+            <span class="barang_lists_title">Warung Jaya Berkah</span>
             <div class="produk_lists">
                 <?php while ($product = $products->fetch_object()) { ?>
                     <div class="produk_list">
                         <img width="100%" src="uploads/<?= $product->product_image ?? '' ?>">
                         <div class="produk_list_footer">
-                            <span><?= $product->product_name ?></span>
+                            <span><?= $product->product_name ?> - <small>(<?= $product->category ?>)</small></span>
                             <span><b>Stok:</b>&nbsp;<?= $product->stok ?></span>
                             <?php if (($qty = getCartQtyById($product->id)) > 0) { ?>
                                 <form class="cart_button_change_qty" action="logic/change_qty_cart_item.php" method="POST">
